@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userchat">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/topnavigateid"
+        android:layout_height="70dp">
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_7"
+        android:id="@+id/backbuttonid"
+        android:layout_marginLeft="20dp">
+    </ImageView>
+<de.hdodenhof.circleimageview.CircleImageView
+    android:layout_width="100dp"
+    android:layout_height="match_parent"
+    android:layout_toRightOf="@+id/backbuttonid"
+    android:id="@+id/Userimaggeid"
+    android:src="@drawable/img_3">
+</de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="User Name"
+        android:gravity="center"
+        android:id="@+id/recivernameid"
+        android:layout_toRightOf="@+id/Userimaggeid"
+        android:textSize="30sp">
+    </TextView>
+</RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        android:layout_below="@+id/topnavigateid"
+        android:layout_marginTop="10dp"
+        android:id="@+id/chatrecyclerid"
+        ></androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/chatrecyclerid">
+
+        <EditText
+            android:id="@+id/messageid"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:layout_marginLeft="20dp"
+            android:hint="Write your message">
+        </EditText>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:src="@drawable/img_8"
+            android:layout_marginLeft="10dp"
+            ></ImageView>
+    </LinearLayout>
+</RelativeLayout>

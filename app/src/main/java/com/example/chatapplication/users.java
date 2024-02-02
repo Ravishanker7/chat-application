@@ -3,6 +3,9 @@ package com.example.chatapplication;
 public class users {
     String imageUri,emaill,name,passs,id,lastmessage;
 
+    public users(){
+
+    }
     public users(String imageUri, String emaill, String name, String passs, String id, String lastmessage) {
         this.imageUri=imageUri;
         this.emaill=emaill;
