@@ -1,4 +1,4 @@
-package com.example.chatapplication;
+package com.example.chatapplication.Adapter;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,6 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.chatapplication.Activity.MainActivity;
+import com.example.chatapplication.R;
+import com.example.chatapplication.Activity.userchat;
+import com.example.chatapplication.Modelclass.users;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -27,6 +31,7 @@ public class Useradapter extends RecyclerView.Adapter<Useradapter.viewholder> {
     @Override
     public Useradapter.viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(mainActivity).inflate(R.layout.useritems,parent,false);
+        View view1=LayoutInflater.from(mainActivity).inflate(R.layout.status,parent,false);
         return new viewholder(view);
     }
 

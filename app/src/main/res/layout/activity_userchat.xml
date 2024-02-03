@@ -4,34 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".userchat">
+    tools:context=".Activity.userchat">
     <RelativeLayout
         android:layout_width="match_parent"
         android:id="@+id/topnavigateid"
+        android:layout_marginTop="5dp"
         android:layout_height="70dp">
     <ImageView
-        android:layout_width="40dp"
-        android:layout_height="match_parent"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:src="@drawable/img_7"
         android:id="@+id/backbuttonid"
-        android:layout_marginLeft="20dp">
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp">
     </ImageView>
-<de.hdodenhof.circleimageview.CircleImageView
-    android:layout_width="100dp"
-    android:layout_height="match_parent"
-    android:layout_toRightOf="@+id/backbuttonid"
-    android:id="@+id/Userimaggeid"
-    android:src="@drawable/img_3">
-</de.hdodenhof.circleimageview.CircleImageView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Userimaggeid"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/backbuttonid"
+            android:src="@drawable/img_3"></de.hdodenhof.circleimageview.CircleImageView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text="User Name"
         android:gravity="center"
+        android:fontFamily="@font/caros"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
         android:id="@+id/recivernameid"
         android:layout_toRightOf="@+id/Userimaggeid"
-        android:textSize="30sp">
+        android:textSize="20sp">
     </TextView>
 </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
@@ -39,13 +46,14 @@
         android:layout_height="580dp"
         android:layout_below="@+id/topnavigateid"
         android:layout_marginTop="10dp"
+        android:layout_above="@+id/msgid"
         android:id="@+id/chatrecyclerid"
         ></androidx.recyclerview.widget.RecyclerView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_below="@+id/chatrecyclerid">
-
+        android:id="@+id/msgid"
+        android:layout_alignParentBottom="true">
         <EditText
             android:id="@+id/messageid"
             android:layout_width="300dp"
@@ -55,9 +63,11 @@
             android:hint="Write your message">
         </EditText>
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="70dp"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
             android:src="@drawable/img_8"
+            android:id="@+id/sendbuttonid"
+            android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             ></ImageView>
     </LinearLayout>

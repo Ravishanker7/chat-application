@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login"
+    tools:context=".Activity.login"
     android:orientation="vertical">
     <ImageView
         android:layout_width="246dp"
@@ -25,33 +25,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign Up"
-            android:textSize="50sp"
+            android:fontFamily="@font/rubikregular"
+            android:textColor="@color/black"
+            android:textSize="40sp"
             android:textStyle="bold">
         </TextView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NAME"
-            android:layout_marginTop="10dp"
-            android:textSize="20sp">
+            android:fontFamily="@font/rubikregular"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp">
         </TextView>
+
         <EditText
+            android:id="@+id/namee"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/namee">
+            android:layout_height="40dp"
+            android:background="@drawable/logintext">
         </EditText>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="EMAIL ID"
-            android:layout_marginTop="10dp"
-            android:textSize="20sp">
+            android:fontFamily="@font/rubikregular"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp">
         </TextView>
         <EditText
             android:id="@+id/semail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/logintext"
             android:ems="10"
             android:inputType="textEmailAddress">
         </EditText>
@@ -59,13 +66,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PASSWORD"
-            android:layout_marginTop="10dp"
-            android:textSize="20sp">
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/rubikregular"
+            android:textSize="15sp">
         </TextView>
         <EditText
             android:id="@+id/spass"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/logintext"
             android:ems="10"
             android:inputType="textPassword">
         </EditText>
@@ -77,6 +86,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:id="@+id/signupid"
+            android:fontFamily="@font/rubikregular"
             android:background="@drawable/button">
         </Button>
         <TextView
@@ -84,7 +94,8 @@
             android:layout_height="wrap_content"
             android:text="Already have an account? Sign In"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/rubikregular"
             android:textSize="15sp">
         </TextView>
     </LinearLayout>

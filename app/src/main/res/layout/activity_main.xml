@@ -4,40 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:id="@+id/topid"
-    android:background="@color/black">
+    tools:context=".Activity.MainActivity">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_vertical"
-        android:src="@drawable/search"
-        android:layout_marginLeft="20dp">
-    </ImageView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOME"
-        android:textSize="40sp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="70dp"
-        android:textColor="@color/white">
-    </TextView>
-<ImageView
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-    android:layout_gravity="center_vertical"
-    android:layout_marginLeft="60dp"
-    android:src="@drawable/img_4"
-    android:background="@drawable/imageshape">
-</ImageView>
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topid"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/black">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:id="@+id/homeid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/caros"
+            android:text="HOME"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/circleImageView"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/img_4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -55,14 +69,18 @@
         android:layout_width="match_parent"
         android:layout_height="428dp"
         android:layout_below="@id/profileview"
-        android:layout_marginTop="13dp"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_above="@+id/logoutid"
+
+        android:layout_marginTop="10dp">
+    </androidx.recyclerview.widget.RecyclerView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="50dp"
         android:orientation="horizontal"
-        android:layout_below="@id/recyclerviewmainid"
-        android:layout_marginTop="28dp">
+        android:id="@+id/logoutid"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp">
         <ImageView
             android:layout_width="80dp"
             android:layout_height="wrap_content"

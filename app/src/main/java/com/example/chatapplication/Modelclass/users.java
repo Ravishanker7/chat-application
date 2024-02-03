@@ -1,7 +1,7 @@
-package com.example.chatapplication;
+package com.example.chatapplication.Modelclass;
 
 public class users {
-    String imageUri,emaill,name,passs,id,lastmessage;
+    public String imageUri,emaill,name,passs,id,lastmessage;
 
     public users(){
 

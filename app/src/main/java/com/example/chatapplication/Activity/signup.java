@@ -1,4 +1,4 @@
-package com.example.chatapplication;
+package com.example.chatapplication.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,9 +11,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.chatapplication.R;
+import com.example.chatapplication.Modelclass.users;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -66,7 +67,7 @@ public class signup extends AppCompatActivity {
                                     StorageReference storageReference=storage.getReference().child("upload").child(id);
                                     users Users=new users(imageUri,emaill,name,passs,id,lastmessage);
                                     reference.setValue(Users);
-                                    startActivity(new Intent(signup.this,MainActivity.class));
+                                    startActivity(new Intent(signup.this, MainActivity.class));
                                 } else {
                                     Toast.makeText(signup.this, "ACCOUNT NOT CREATED", Toast.LENGTH_SHORT).show();
                                 }

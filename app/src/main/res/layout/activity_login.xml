@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login"
+    tools:context=".Activity.login"
     android:orientation="vertical">
 <ImageView
     android:layout_width="246dp"
@@ -25,44 +25,51 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="Login"
-           android:textSize="50sp"
+           android:fontFamily="@font/rubikregular"
+           android:textSize="40sp"
+           android:textColor="@color/black"
            android:textStyle="bold">
        </TextView>
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="EMAIL ID"
+           android:fontFamily="@font/rubikregular"
            android:layout_marginTop="20dp"
-           android:textSize="20sp">
+           android:textSize="15sp">
        </TextView>
        <EditText
            android:id="@+id/editTextTextEmailAddress"
            android:layout_width="match_parent"
-           android:layout_height="wrap_content"
+           android:layout_height="40dp"
            android:ems="10"
+           android:background="@drawable/logintext"
            android:inputType="textEmailAddress">
        </EditText>
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="PASSWORD"
+           android:fontFamily="@font/rubikregular"
            android:layout_marginTop="20dp"
-           android:textSize="20sp">
+           android:textSize="15sp">
        </TextView>
        <EditText
            android:id="@+id/passwodlogin"
            android:layout_width="match_parent"
-           android:layout_height="wrap_content"
+           android:layout_height="40dp"
            android:ems="10"
+           android:background="@drawable/logintext"
            android:inputType="textPassword">
        </EditText>
        <Button
            android:layout_width="200dp"
            android:layout_height="wrap_content"
            android:text="LOGIN"
-           android:textSize="20sp"
+           android:textSize="15sp"
            android:id="@+id/loginid"
            android:layout_gravity="center"
+           android:fontFamily="@font/rubikregular"
            android:layout_marginTop="30dp"
            android:background="@drawable/button">
        </Button>
@@ -73,6 +80,7 @@
            android:layout_gravity="center"
            android:layout_marginTop="20dp"
            android:textSize="15sp"
+           android:fontFamily="@font/rubikregular"
            android:id="@+id/signupp">
        </TextView>
    </LinearLayout>
