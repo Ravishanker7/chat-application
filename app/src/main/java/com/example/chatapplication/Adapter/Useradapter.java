@@ -31,7 +31,6 @@ public class Useradapter extends RecyclerView.Adapter<Useradapter.viewholder> {
     @Override
     public Useradapter.viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(mainActivity).inflate(R.layout.useritems,parent,false);
-        View view1=LayoutInflater.from(mainActivity).inflate(R.layout.status,parent,false);
         return new viewholder(view);
     }
 

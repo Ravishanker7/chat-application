@@ -45,17 +45,30 @@ public class signup extends AppCompatActivity {
         Name=findViewById(R.id.namee);
         signup=findViewById(R.id.signupid);
 
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
         database=FirebaseDatabase.getInstance();
         storage=FirebaseStorage.getInstance();
-
+        imageUri = "https://firebasestorage.googleapis.com/v0/b/chat-application-70cf1.appspot.com/o/img_13.png?alt=media&token=1ac99737-8d53-4272-9232-9806bd1e55a2";
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 emaill=email.getText().toString();
                 passs=pass.getText().toString();
                 name=Name.getText().toString();
+
                 lastmessage="good morning";
-                imageUri="https://firebasestorage.googleapis.com/v0/b/chat-application-70cf1.appspot.com/o/Profilee.png?alt=media&token=57a2e99b-1c53-4d7a-9c4e-5152880d6cc1";
+                if(emaill.isEmpty() || passs.isEmpty() || name.isEmpty()){
+                    Toast.makeText(signup.this, "ENTER THE DETAILS", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (!emaill.matches(emailRegex)) {
+                    Toast.makeText(signup.this, "Enter a valid email address", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(pass.length()<6){
+                    Toast.makeText(signup.this, "PASSWORD MUST BE 6 CHARACTERS", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 myauth.createUserWithEmailAndPassword(emaill, passs)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -67,7 +80,7 @@ public class signup extends AppCompatActivity {
                                     StorageReference storageReference=storage.getReference().child("upload").child(id);
                                     users Users=new users(imageUri,emaill,name,passs,id,lastmessage);
                                     reference.setValue(Users);
-                                    startActivity(new Intent(signup.this, MainActivity.class));
+                                    startActivity(new Intent(signup.this,selectimage.class));
                                 } else {
                                     Toast.makeText(signup.this, "ACCOUNT NOT CREATED", Toast.LENGTH_SHORT).show();
                                 }

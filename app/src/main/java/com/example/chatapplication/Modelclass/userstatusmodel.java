@@ -1,16 +1,19 @@
 package com.example.chatapplication.Modelclass;
 
 public class userstatusmodel {
-    String usrimage;
+    public String imageUri;
 
     public userstatusmodel() {
     }
-
-    public String getUsrimage() {
-        return usrimage;
+    userstatusmodel(String imageUri){
+        this.imageUri=imageUri;
     }
 
-    public void setUsrimage(String usrimage) {
-        this.usrimage = usrimage;
+    public String getimageUri() {
+        return imageUri;
+    }
+
+    public void setimageUri(String imageUri) {
+        this.imageUri = imageUri;
     }
 }
